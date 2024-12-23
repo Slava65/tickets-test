@@ -78,7 +78,7 @@
   border: none;
   padding-block: 0;
   padding-inline: 0;
-  outline: none
+  outline: none;
 }
 
 .currency__button:focus {
@@ -122,7 +122,7 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 14px;
-  outline: none
+  outline: none;
 }
 
 .currency__button_last:focus {
