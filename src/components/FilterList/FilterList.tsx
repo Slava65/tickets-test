@@ -14,7 +14,7 @@ export default function FilterList({
   const [hoverFilter, setHoverFilter] = useState<string | undefined>("");
   const [focusedCurrenceButton, setFocusedCurrenceButton] =
     useState<string>("11");
-  //Установка фокуса на RUB при загрузке.
+  //Управление фокусом кнопок валюты
   useEffect(() => {
     document.getElementById(focusedCurrenceButton)?.focus();
     document?.addEventListener("mousedown", (e) => {
@@ -72,7 +72,7 @@ export default function FilterList({
       .getElementById((currencyList.length + 10).toString())
       ?.setAttribute("class", "currency__button_last");
   };
-
+  //обработчик кнопки валюты
   const handleCurrencyButton = (e: React.MouseEvent<HTMLButtonElement>) => {
     const target = e.target as HTMLButtonElement;
     setFocusedCurrenceButton(target.id);

@@ -18,8 +18,10 @@ function App() {
     2: { status: false, text: "2 пересадки" },
     3: { status: false, text: "3 пересадки" },
   });
+
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const firstRender = useRef(0);
+  //Инициализация данных
   useEffect(() => {
     setIsLoading(true);
     getTickets().then((res) => {
@@ -29,7 +31,7 @@ function App() {
       setIsLoading(false);
     });
   }, []);
-
+  
   useEffect(() => {
     if (firstRender.current < 2) {
       firstRender.current++;
@@ -38,7 +40,7 @@ function App() {
       setFilteredTickets(currentTickets.sort((a, b) => a.price - b.price));
     }
   }, [filters]);
-
+  //Изменение фильтра чекбоксами
   const onFilter = (filterKey: keyof IFilters) => {
     const currentStatus = filters[filterKey].status;
     setFilters({
@@ -49,7 +51,7 @@ function App() {
       },
     });
   };
-
+  //Фильтрация 
   const toFilter = () => {
     const checkedFilters = (
       Object.keys(filters) as unknown as (keyof IFilters)[]
@@ -65,7 +67,7 @@ function App() {
       });
     }
   };
-
+  //Изменение фильтра кнопкой только
   const onOnlyOneFilter = (filterKey: keyof IFilters) => {
     let copyFilters = structuredClone(filters);
     for (let key in copyFilters) {
