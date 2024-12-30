@@ -1,8 +1,14 @@
+@use './scss/base';
+
+html {
+  overflow-y: scroll;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
-  background: #f3f7fa;
+  background: base.$app-background-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;

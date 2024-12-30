@@ -1,0 +1,13 @@
+$font-stack: Inter, Arial, sans-serif;
+$button-font-main-color: #ffffff;
+$filterui-main-color: #2196f3;
+$app-background-color: #f3f7fa;
+$sections-background-color: #ffffff;
+$time-airport-font-color: #575757;
+
+@mixin fontstyle($weight, $size, $height) {
+  font-family: $font-stack;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}

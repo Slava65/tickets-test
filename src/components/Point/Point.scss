@@ -1,0 +1,37 @@
+@use "../../scss/base";
+
+%margin-block {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.point {
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.point_right {
+  align-items: end;
+}
+
+.point__time {
+  @include base.fontstyle($weight: 500, $size: 40px, $height: 40px);
+  @extend %margin-block;
+  color: base.$time-airport-font-color;
+}
+
+.point__airport {
+  @include base.fontstyle($weight: 700, $size: 14px, $height: 14px);
+  @extend %margin-block;
+  margin-top: 15px;
+  color: base.$time-airport-font-color;
+}
+
+.point__date {
+  @include base.fontstyle($weight: 500, $size: 15px, $height: 15px);
+  @extend %margin-block;
+  margin-top: 7px;
+  color: #afb6b9;
+}

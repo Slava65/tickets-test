@@ -1,7 +1,14 @@
+@use "../../scss/base";
+
+%margin-block {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
 .filterlist {
   width: 300px;
   height: 400px;
-  background-color: #ffffff;
+  background-color: base.$sections-background-color;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -19,24 +26,18 @@
 }
 
 .filterlist__title {
-  margin-block-start: 0;
-  margin-block-end: 0;
+  @include base.fontstyle($weight: 700, $size: 14px, $height: 14px);
+  @extend %margin-block;
   text-align: start;
   margin-bottom: 20px;
-  font-family: "Inter", ‘Arial’, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 14px;
   margin-left: 25px;
 }
 
 .currency__list {
+  @extend %margin-block;
   list-style: none;
   display: flex;
   width: 257px;
-  margin-block-start: 0;
-  margin-block-end: 0;
   padding-inline-start: 0;
   margin: 0 auto;
 }
@@ -50,7 +51,7 @@
 }
 
 .currency__item:hover {
-  border-color: #2196f3;
+  border-color: base.$filterui-main-color;
   background-color: #f2fcff;
   cursor: pointer;
 }
@@ -66,14 +67,10 @@
 }
 
 .currency__button {
+  @include base.fontstyle($weight: 700, $size: 14px, $height: 14px);
   width: 85px;
   height: 50px;
-  color: #2196f3;
-  font-family: "Inter", ‘Arial’, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 14px;
+  color: base.$filterui-main-color;
   background-color: rgba(255, 255, 255, 0);
   border: none;
   padding-block: 0;
@@ -82,54 +79,22 @@
 }
 
 .currency__button:focus {
-  background-color: #2196f3;
-  color: #ffffff;
-}
-
-.currency__button_first {
-  width: 85px;
-  height: 50px;
-  background-color: rgba(255, 255, 255, 0);
-  border: none;
-  padding-block: 0;
-  padding-inline: 0;
-  outline: 0;
-  color: #2196f3;
-  font-family: "Inter", ‘Arial’, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 14px;
+  background-color: base.$filterui-main-color;
+  color: base.$button-font-main-color;
 }
 
 .currency__button_first:focus {
-  background-color: #2196f3;
+  background-color: base.$filterui-main-color;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
-  color: #ffffff;
-}
-
-.currency__button_last {
-  width: 85px;
-  height: 50px;
-  background-color: rgba(255, 255, 255, 0);
-  border: none;
-  padding-block: 0;
-  padding-inline: 0;
-  color: #2196f3;
-  font-family: "Inter", ‘Arial’, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 14px;
-  outline: none;
+  color: base.$button-font-main-color;
 }
 
 .currency__button_last:focus {
-  background-color: #2196f3;
+  background-color: base.$filterui-main-color;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
-  color: #ffffff;
+  color: base.$button-font-main-color;
 }
 
 .transferFilter {
@@ -138,14 +103,13 @@
 }
 
 .transferFilter__list {
+  @extend %margin-block;
   list-style: none;
   min-height: 200px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding-inline-start: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
 }
 
 .transferFilter__type {
@@ -179,27 +143,19 @@
   top: 0;
   width: 12px;
   height: 12px;
-  border: 1px solid #2196f3;
+  border: 1px solid base.$filterui-main-color;
   border-radius: 2px;
-  background-color: #ffffff;
+  background-color: base.$button-font-main-color;
 }
 
 .transferFilter__text {
-  font-family: "Inter", ‘Arial’, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
+  @include base.fontstyle($weight: 500, $size: 16px, $height: 24px);
 }
 
 .transferFilter__only {
+  @include base.fontstyle($weight: 500, $size: 18px, $height: 18px);
   margin-right: 20px;
   border: none;
   background-color: rgba(255, 255, 255, 0);
-  color: #2196f3;
-  font-family: "Inter", ‘Arial’, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 18px;
+  color: base.$filterui-main-color;
 }
