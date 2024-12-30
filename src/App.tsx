@@ -4,7 +4,6 @@ import FilterList from "./components/FilterList/FilterList";
 import Preloader from "./components/Preloader/Preloader";
 import { ITicket, IFilters } from "./types";
 import getTickets from "../src/api/api";
-import "./App.css";
 
 function App() {
   const [tickets, setTickets] = useState<ITicket[]>([]);

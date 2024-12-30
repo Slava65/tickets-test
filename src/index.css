@@ -1,7 +1,0 @@
-@import url('./vendor/normalize.css');
-@import url('./App.css'); 
-@import url('../src/components/TicketList/TicketList.css'); 
-@import url('../src/components/Ticket/Ticket.css');
-@import url('../src/components/Point/Point.css'); 
-@import url('../src/components/FilterList/FilterList.css'); 
-@import url('../src/components/Preloader/Preloader.css'); 

@@ -11,10 +11,6 @@ export interface ITicket {
   stops: number;
   price: number;
 }
-// interface IFilterItem {
-//   status: boolean,
-//   value: number
-// }
 
 export interface IFilters {
   10: { status: boolean; text: "Все" };

@@ -67,10 +67,10 @@ export default function FilterList({
   const onFocus = () => {
     document
       .getElementById("11")
-      ?.setAttribute("class", "currency__button_first");
+      ?.setAttribute("class", "currency__button currency__button_first");
     document
       .getElementById((currencyList.length + 10).toString())
-      ?.setAttribute("class", "currency__button_last");
+      ?.setAttribute("class", "currency__button currency__button_last");
   };
   //обработчик кнопки валюты
   const handleCurrencyButton = (e: React.MouseEvent<HTMLButtonElement>) => {

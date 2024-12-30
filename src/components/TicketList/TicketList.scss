@@ -1,0 +1,12 @@
+@use '../../scss/base';
+
+.ticketlist {
+  list-style: none;
+  margin-top: 200px;
+  min-height: 400px;
+  min-width: 700px;
+}
+
+.ticketlist__loading {
+  @include base.fontstyle($weight: 700, $size: 28px, $height: 28px);
+}

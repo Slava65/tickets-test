@@ -13,7 +13,6 @@ export default function Point({
     year: "numeric",
     weekday: "short",
   });
-  ("12.05.18");
   const dateTimeFormatter = (dateTimeString: string) => {
     const dateTimeArr = dateTimeString.split(".").map((item, index) => {
       if (index === 2) return Number("20" + item);
