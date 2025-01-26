@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import commonjs from 'vite-plugin-commonjs'
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/tickets-test",
   plugins: [react(), commonjs()],
   build: {
     commonjsOptions: { transformMixedEsModules: true } // Change
