@@ -20,20 +20,17 @@ function App() {
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const firstRender = useRef(0);
-  //Инициализация данных
-  useEffect(() => {
-    setIsLoading(true);
-    getTickets().then((res) => {
-      const sortedTickets = res.sort((a, b) => a.price - b.price);
-      setTickets(sortedTickets);
-      setFilteredTickets(sortedTickets);
-      setIsLoading(false);
-    });
-  }, []);
-  
+
   useEffect(() => {
     if (firstRender.current < 2) {
-      firstRender.current++;
+      setIsLoading(true);
+      getTickets().then((res) => {
+        const sortedTickets = res.sort((a, b) => a.price - b.price);
+        setTickets(sortedTickets);
+        setFilteredTickets(sortedTickets);
+        setIsLoading(false);
+        firstRender.current++;
+      });
     } else {
       const currentTickets = toFilter();
       setFilteredTickets(currentTickets.sort((a, b) => a.price - b.price));
